@@ -3,16 +3,16 @@
   <div class="span4">
   <section>
   <h1>
-    <center><%= link_to image_tag @user.image, :size => "300x300", :id=>"profilepicture", :title=> "Do i look good? Yes? Awww yeah!" %></center>
+    <center><%= link_to image_tag @user.image, :size => "300x500", :id=>"profilepicture"  %></center>
   </h1>
 </div>
 <div class="mid span10">
 <section class="btnfllow"><%= render "follow_form" if signed_in? %></section>
 <h12><%= @user.name %></h12></br>
-<h3><algnleft>Username: <a>@<%= @user.username %></a></algnleft></br>
-<algnleft>Status: <a><%= @user.status %></a></algnleft></br>
-<algnleft>Course: <a><%= @user.course %></a></algnleft></br>
-<algnleft>School: <a><%= @user.school %></a></algnleft>
+<h3>
+<algnleft>Status: <%= @user.status %></algnleft></br>
+<algnleft>Course: <%= @user.course %></a></algnleft></br>
+<algnleft>School: <%= @user.school %></a></algnleft>
 </br>
 <% if @user.followers.count >= 0 && @user.followers.count < 200%>
 <b>Social Status: Kiido</b>
